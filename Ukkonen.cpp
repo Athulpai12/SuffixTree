@@ -37,13 +37,13 @@ private:
    				return parent_depth + edge_len();
 			}
 
- 			void link(node * son, int start, int end, const std::string &s)
+ 			void link(node * child, int start, int end, const std::string &s)
  			{
-   				children[s[start]] = son;
-   				son->parent = this;
-   				son->parent_depth = this->depth();
-   				son->edge_start = start;
-   				son->edge_end = end;
+   				children[s[start]] = child;
+   				child->parent = this;
+   				child->parent_depth = this->depth();
+   				child->edge_start = start;
+   				child->edge_end = end;
 			}
 
  			bool is_leaf()
